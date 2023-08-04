@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../../../Gitlab/vlufe"
+	},
+	{
+		"path": "../../../../../../../Gitlab/AuroraTrangChu"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "AuroraTrangChu"
+  }
+}
