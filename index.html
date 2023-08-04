@@ -123,28 +123,55 @@
                   </button>
                 </div>
               </div>
-              <div class="place-list col-xl-12">
+              <div id="placeList" class="place-list col-xl-12">
                 <div class="place-item col-xl-4 col-md-12">
+                  <div
+                    id="deteleBtn"
+                    class="detele-btn"
+                    onclick="deleteElement(this.closest('.place-item'),'Do you want to delete this ticket ?')"
+                  >
+                    <i class="ti-close"></i>
+                  </div>
                   <img
                     src="./assets/css/img/newyork.jpg"
                     alt=""
+                    id="placeImg"
                     class="place-img col-xl-12"
                   />
-                  <div class="place-body ">
-                    <h3 class="place-heading">New York</h3>
-                    <p class="place-time">Fri 27 Nov 2016</p>
-                    <p class="place-dsc">
+                  <div class="place-body">
+                    <h3 id="placeHeading" class="place-heading">New York</h3>
+                    <p id="placeTime" class="place-time">Fri 27 Nov 2016</p>
+                    <p id="placeDsc" class="place-dsc">
                       Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                     </p>
-                    <a onclick="showModal('buyTicketModal')" class="place-buy-btn"
-                      >Buy Tickets <i class="ti-money"></i
-                    ></a>
+                    <div class="ticket-btn">
+                      <a
+                        onclick="showModal('buyTicketModal')"
+                        class="place-buy-btn"
+                        >Buy Tickets</a
+                      >
+                      <div
+                        id="updateBtn"
+                        class="update-btn"
+                        onclick="showModal('popUpEditTickets',2,false, this.closest('.place-item'))"
+                      >
+                        Update
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="place-item col-xl-4 col-md-12">
+                  <div
+                    id="deteleBtn"
+                    class="detele-btn"
+                    onclick="deleteElement(this.closest('.place-item'),'Do you want to delete this ticket ?')"
+                  >
+                    <i class="ti-close"></i>
+                  </div>
                   <img
                     src="./assets/css/img/paris.jpg"
                     alt=""
+                    id="placeImg"
                     class="place-img col-xl-12"
                   />
                   <div class="place-body">
@@ -153,15 +180,34 @@
                     <p class="place-dsc">
                       Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                     </p>
-                    <a onclick="showModal('buyTicketModal')" class="place-buy-btn"
-                      >Buy Tickets <i class="ti-money"></i
-                    ></a>
+                    <div class="ticket-btn">
+                      <a
+                        onclick="showModal('buyTicketModal')"
+                        class="place-buy-btn"
+                        >Buy Tickets
+                      </a>
+                      <div
+                        id="updateBtn"
+                        class="update-btn"
+                        onclick="showModal('popUpEditTickets',2,false, this.closest('.place-item'))"
+                      >
+                        Update
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="place-item col-xl-4 col-md-12">
+                  <div
+                    id="deteleBtn"
+                    class="detele-btn"
+                    onclick="deleteElement(this.closest('.place-item'),'Do you want to delete this ticket ?')"
+                  >
+                    <i class="ti-close"></i>
+                  </div>
                   <img
                     src="./assets/css/img/sanfrancisco.jpg"
                     alt=""
+                    id="placeImg"
                     class="place-img col-xl-12"
                   />
                   <div class="place-body">
@@ -170,11 +216,29 @@
                     <p class="place-dsc">
                       Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                     </p>
-                    <a onclick="showModal('buyTicketModal')" class="place-buy-btn"
-                      >Buy Tickets <i class="ti-money"></i
-                    ></a>
+                    <div class="ticket-btn">
+                      <a
+                        onclick="showModal('buyTicketModal')"
+                        class="place-buy-btn"
+                        >Buy Tickets
+                      </a>
+                      <div
+                        id="updateBtn"
+                        class="update-btn"
+                        onclick="showModal('popUpEditTickets',2,false, this.closest('.place-item'))"
+                      >
+                        Update
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div
+                id="add-btn"
+                class="col-xl-2"
+                onclick="showModal('popUpEditTickets', 1)"
+              >
+                +
               </div>
             </div>
           </div>
@@ -188,29 +252,48 @@
               <p><i class="ti-mobile"></i>Phone: +00 151515</p>
               <p><i class="ti-email"></i>Email: mail@mail.com</p>
             </div>
-            <div class="contact-form  col-xl-6">
+            <div class="contact-form col-xl-6">
               <form action="">
-                 <div class="contact-row">
+                <div class="contact-row">
                   <div class="contact-col col-xl-6">
-                    <input type="text" class="form-control" required placeholder="Name">
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      placeholder="Name"
+                    />
                   </div>
                   <div class="contact-col col-xl-6">
-                    <input type="email" class="form-control" required placeholder="Email">
+                    <input
+                      type="email"
+                      class="form-control"
+                      required
+                      placeholder="Email"
+                    />
                   </div>
-                 </div>
-                 <div class="contact-row">
+                </div>
+                <div class="contact-row">
                   <div class="contact-col col-xl-12">
-                    <input type="text" class="form-control" required placeholder="Message">
+                    <input
+                      type="text"
+                      class="form-control"
+                      required
+                      placeholder="Message"
+                    />
                   </div>
-                 </div>
-                 <input class="contact-submit" type="submit" value="Send">
+                </div>
+                <input class="contact-submit" type="submit" value="Send" />
               </form>
             </div>
           </div>
         </div>
 
         <div class="map-sec col-xl-12">
-          <img src="./assets/css/img/map.jpg" alt="Map" class="map-sec-img col-xl-12">
+          <img
+            src="./assets/css/img/map.jpg"
+            alt="Map"
+            class="map-sec-img col-xl-12"
+          />
         </div>
       </div>
 
@@ -228,9 +311,13 @@
       </div>
     </div>
 
-    <div id="buyTicketModal" onclick="hideModal('buyTicketModal')" class="buytk-modal">
+    <div
+      id="buyTicketModal"
+      onclick="showModal('buyTicketModal',0,true)"
+      class="buytk-modal"
+    >
       <div onclick="event.stopPropagation()" class="buytk-cont col-xl-7">
-        <div onclick="hideModal('buyTicketModal')" class="buytk-close">
+        <div onclick="showModal('buyTicketModal',0,true)" class="buytk-close">
           <i class="ti-close"></i>
         </div>
         <header class="buytk-header">
@@ -264,6 +351,69 @@
         <footer class="buytk-footer">
           <p class="buytk-help">Need <a href="">help?</a></p>
         </footer>
+      </div>
+    </div>
+    <div id="popUpEditTickets" onclick="showModal('popUpEditTickets',0,true)">
+      <div class="sec-add-cont" onclick="event.stopPropagation()">
+        <div
+          class="edit-detele col-xl-12"
+          onclick="showModal('popUpEditTickets',0,true)"
+        >
+          <i class="ti-close"></i>
+        </div>
+        <p id="popUpTitle" class="sec-add-std-title">Add Tickets</p>
+        <div id="secAddStd" class="sec-input-std sec-input col-xl-12">
+          <div class="ip-sec-add">
+            <div class="table-add-row">
+              <div>
+                <div class="form-ip">
+                  <label class="add-ip-title" for="txtTicketImg">Image</label>
+                  <input
+                    class="text"
+                    id="txtTicketImg"
+                    type="text"
+                    placeholder="link ..."
+                  />
+                </div>
+                <div class="form-ip">
+                  <label for="txtPlace" class="add-ip-title">Place</label>
+                  <input
+                    class="input"
+                    id="txtPlace"
+                    type="text"
+                    maxlength="42"
+                    placeholder="New York ..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="table-add-row">
+              <div class="add-ip-title">
+                <div class="form-ip">
+                  <label for="txtDes">Description</label>
+                  <input
+                    class="input"
+                    id="txtDes"
+                    type="text"
+                    min="0"
+                    max="10"
+                    onkeydown="blockNegative(event)"
+                    oninput="limitInputLengthAndMaxValue(event)"
+                    placeholder="Text ..."
+                  />
+                </div>
+                <div class="form-ip">
+                  <label class="add-ip-title" for="txtDate">Event date</label>
+                  <input class="input" id="txtDate" type="date" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-add-box">
+            <div id="popUpKindBtn" class="center-btn col-xl-2">ADD</div>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -10,7 +10,9 @@ html {
   font-family: Arial, Helvetica, sans-serifS;
   scroll-behavior: smooth;
 }
-dl, ol, ul{
+dl,
+ol,
+ul {
   margin-bottom: 0px !important;
 }
 /* Main */
@@ -25,11 +27,10 @@ dl, ol, ul{
   right: 0;
   height: 46px;
   background-color: black;
-  z-index: 1;
+  z-index: 2;
 }
-#nav{
+#nav {
   display: flex;
-
 }
 #nav li {
   list-style: none;
@@ -177,9 +178,11 @@ dl, ol, ul{
   margin-top: 32px;
   display: flex;
   padding: 0 !important;
+  flex-wrap: wrap;
 }
 .place-item {
   padding: 0 8px;
+  margin-bottom: 35px;
 }
 
 .place-img:hover {
@@ -187,6 +190,7 @@ dl, ol, ul{
 }
 .place-img {
   padding: 0 !important;
+  min-height: 170px;
 }
 .place-body {
   color: #000;
@@ -197,37 +201,39 @@ dl, ol, ul{
 .place-heading {
   font-size: 15px;
   font-weight: 600;
+  min-height: 20px;
 }
 .place-time {
   margin-top: 15px;
   color: #757575;
+  min-height: 22px;
 }
 .place-dsc {
   margin-top: 15px;
   line-height: 1.4;
+  min-height: 40px;
+  max-height: 40px;
+  overflow: hidden;
 }
-.place-buy-btn:hover {
+.place-buy-btn:hover,
+.update-btn:hover {
   color: #000;
   background-color: #ccc;
   text-decoration: none;
 }
-.place-buy-btn {
+.place-buy-btn,
+.update-btn {
   color: #fff;
   background-color: #000;
   text-decoration: none;
   padding: 10px 8px !important;
-  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .cus-input-cont {
   display: flex;
   justify-content: space-around;
   margin-left: 40px;
-}
-#txtSearch,
-.cus-btn-src {
-  font-size: 15px;
-  padding: 5px
-
 }
 
 @keyframes slide {
@@ -235,11 +241,11 @@ dl, ol, ul{
     background: url("/assets/css/img/losa.jpg") top center / cover no-repeat;
   }
 }
-@keyframes modalFadeIn{
-  from{
+@keyframes modalFadeIn {
+  from {
     transform: translateY(-140px);
   }
-  to{
+  to {
     transform: translateY(0);
   }
 }
@@ -256,13 +262,13 @@ dl, ol, ul{
   align-items: center;
   justify-content: center;
   border-radius: 5%;
-
+  z-index: 2;
 }
 .buytk-cont {
   background-color: #fff;
   min-height: 200px;
   padding: 0px !important;
-  animation: modalFadeIn ease .3s;
+  animation: modalFadeIn ease 0.3s;
 }
 .buytk-header {
   background-color: #009688;
@@ -323,40 +329,40 @@ dl, ol, ul{
 }
 
 /* Contact */
-.contact-content{
+.contact-content {
   display: flex;
-  margin-top: 48px; 
+  margin-top: 48px;
 }
-.contact-row{
+.contact-row {
   display: flex;
 }
-.contact-info{
+.contact-info {
   font-size: 18px;
 }
-.contact-info p{
+.contact-info p {
   margin-bottom: 5px !important;
 }
 
-.contact-info i{
+.contact-info i {
   margin-right: 10px;
 }
-.contact-form{
+.contact-form {
   font-size: 15px;
 }
-.contact-col{
+.contact-col {
   padding: 0 !important;
 }
-.form-control{
+.form-control {
   padding: 10px;
   border: 1px solid #ccc;
 }
-.contact-row{
+.contact-row {
   margin-bottom: 12px;
 }
-.contact-submit:hover{
+.contact-submit:hover {
   opacity: 0.8;
 }
-.contact-submit{
+.contact-submit {
   background-color: #000;
   color: #fff;
   border: none;
@@ -364,49 +370,197 @@ dl, ol, ul{
   float: right;
 }
 
-.map-sec,.map-sec-img{
+.map-sec,
+.map-sec-img {
   padding: 0px !important;
 }
 
 /* Footer */
-#footer{
+#footer {
   padding: 64px 16px;
   text-align: center;
 }
-.socials-list{
+.socials-list {
   font-size: 24px;
 }
-.socials-list a:hover{
+.socials-list a:hover {
   color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
-.socials-list a,.coppy-right,.coppy-right a,.coppy-right a:hover{
+.socials-list a,
+.coppy-right,
+.coppy-right a,
+.coppy-right a:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.coppy-right{
+.coppy-right {
   margin-top: 15px;
 }
 
-.coppy-right a{
+.coppy-right a {
   text-decoration: underline;
 }
 
-.mobile-menu:hover{
+.mobile-menu:hover {
   background-color: #ccc;
 }
-.mobile-menu:hover i{
+.mobile-menu:hover i {
   color: #000;
 }
-.mobile-menu{
+.mobile-menu {
   float: right;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   padding: 0 20px;
 }
-.mobile-menu i{
+.mobile-menu i {
   color: #fff;
   font-size: 20px;
   line-height: 46px;
+}
+.add-btn:hover {
+  opacity: 0.8;
+}
+#add-btn {
+  padding: 2px 0;
+  background-color: #fff;
+  margin-top: 20px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.ticket-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.detele-btn:hover {
+  opacity: 0.8;
+}
+.detele-btn {
+  font-size: 15px;
+  position: absolute;
+  background-color: #252424;
+  z-index: 1;
+  color: #fff;
+  padding: 5px 8px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Edit popUp */
+#popUpEditTickets {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.sec-add-cont {
+  width: 52%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #009688;
+  animation: modalFadeIn ease 0.3s;
+}
+.sec-add-std-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  background-color: #009688;
+}
+
+.sec-input {
+  padding: 10px;
+}
+.sec-input input {
+  padding: 11px;
+  outline: none;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.ip-sec-add {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  background-color: #fff;
+}
+.ip-sec-add {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  background-color: #fff;
+}
+.table-add-row {
+  width: 49%;
+}
+.form-ip {
+  display: flex;
+  flex-direction: column;
+}
+.add-ip-title {
+  font-weight: 600;
+  margin-top: 10px;
+}
+.btn-add-box {
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.cus-btn {
+  color: #fff;
+  background-color: #009688;
+  border: none;
+  border-radius: 5px;
+  box-shadow: #000 1px 2px 4px;
+  font-size: 14px;
+  font-weight: bolder;
+  min-height: 40px;
+  padding: 12px;
+  transition: 0.3s all;
+  cursor: pointer;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+.cus-btn i {
+  font-size: 14px;
+  padding-right: 8px;
+  margin-bottom: 2px;
+}
+.center-btn:hover,
+.edit-detele:hover {
+  opacity: 0.8;
+}
+.center-btn {
+  padding: 10px 0px;
+  color: #fff;
+  text-align: center;
+  background-color: #009688;
+  border-radius: 5px;
+}
+.edit-detele {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
 }

@@ -1,44 +1,51 @@
 /* PC */
 @media (min-width: 1024px) {
-    #nav{
-        display: flex;
-    }
-    .mobile-menu{
-        display: none;
-    }
+  #nav {
+    display: flex;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  #txtSearch,
+  .cus-btn-src {
+    font-size: 15px;
+  }
 }
 /* TABLET VÀ MOBILE */
 @media (max-width: 1023px) {
-    .place-list{
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .place-item{
-        margin-top: 20px;
-    }
+  .place-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .place-item {
+    margin-top: 20px;
+  }
 }
 
 /* TABLED */
 @media (min-width: 740px) and (max-width: 1023px) {
-    .mobile-menu{
-        display: none;
-    }
+  .mobile-menu {
+    display: none;
+  }
+  .cus-btn-src {
+    font-size: 15px;
+  }
 }
 
 /* MOBILE */
 @media (max-width: 739px) {
-    #header{
-        overflow: hidden;
-    }
-    #nav{
-        display: block;
-    }
-    .members-list{
-        display: block;
-    }
-    
-    .cus-input-cont{
-        margin-left: 0px !important;
-    }
+  #header {
+    overflow: hidden;
+  }
+  #nav {
+    display: block;
+  }
+  .members-list {
+    display: block;
+  }
+
+  .cus-input-cont {
+    margin-left: 0px !important;
+  }
 }
